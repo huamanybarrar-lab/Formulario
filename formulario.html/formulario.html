@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #0b3263; /* Fondo azul oscuro */
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        /* Tarjeta blanca con bordes redondeados pronunciados */
+        .card {
+            background-color: white;
+            padding: 35px 30px;
+            border-radius: 20px;
+            width: 320px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            color: #0b3263;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .subtitulo {
+            color: #555555;
+            font-size: 13px;
+            margin-bottom: 20px;
+            line-height: 1.3;
+        }
+
+        /* Cada grupo de campo apilado verticalmente */
+        .campo {
+            margin-bottom: 12px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            font-size: 13px;
+            font-weight: bold;
+            color: #000000;
+            margin-bottom: 4px;
+        }
+
+        input {
+            width: 100%;
+            padding: 6px 10px;
+            font-size: 13px;
+            border: 1px solid #777777;
+            border-radius: 6px;
+            outline: none;
+            color: #333333;
+        }
+
+        input::placeholder {
+            color: #888888;
+        }
+
+        .botones {
+            display: flex;
+            gap: 6px;
+            margin-top: 15px;
+        }
+
+        button {
+            padding: 4px 10px;
+            font-size: 13px;
+            background-color: #efefef;
+            border: 1px solid #777777;
+            border-radius: 3px;
+            cursor: pointer;
+            color: #000000;
+        }
+
+        button:hover {
+            background-color: #e0e0e0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <h1>Registro de<br>productos</h1>
+        
+        <p class="subtitulo">Complete los siguientes datos para registrar un producto</p>
+
+        <form>
+            <div class="campo">
+                <label for="producto">Nombre del producto:</label>
+                <input type="text" id="producto" placeholder="Escribe el producto">
+            </div>
+
+            <div class="campo">
+                <label for="stock">Stock:</label>
+                <input type="text" id="stock" placeholder="Stock">
+            </div>
+
+            <div class="campo">
+                <label for="proveedor">Proveedor:</label>
+                <input type="text" id="proveedor" placeholder="Nombre proveedor">
+            </div>
+
+            <div class="campo">
+                <label for="correo">Correo:</label>
+                <input type="email" id="correo" placeholder="example@gmail.com">
+            </div>
+
+            <div class="campo">
+                <label for="fecha">Fecha:</label>
+                <input type="date" id="fecha">
+            </div>
+
+            <div class="botones">
+                <button type="submit">Registrar</button>
+                <button type="reset">Limpiar</button>
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>
